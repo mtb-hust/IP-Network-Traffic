@@ -19,5 +19,4 @@ for i in range(380):
                 file_X.close()
         except:
             continue
-   
-            
+    print(i/380*100)

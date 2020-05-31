@@ -1,3 +1,5 @@
+# kiểm trả tập data có bao nhiêu cột, mỗi cột có thông số ra sao
+
 import pandas as pd
 
 dataFrame = pd.read_csv("./Data/RawData.csv", nrows = 10)

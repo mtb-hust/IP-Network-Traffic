@@ -1,3 +1,5 @@
+#bảng phân tích dữ liệu, phân phối của các cột dữ liệu được trích xuất. 
+#từ đó có thể xem xét tính chất dữ liệu
 import pandas as pd
 import csv 
 import numpy as np

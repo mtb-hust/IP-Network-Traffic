@@ -1,3 +1,5 @@
+# File này được dùng để thêm tiêu đề cho file csv được tách ra từ labelledData,
+#  vì sau khi xuất file từ labbelledData, header bị mất, làm missing một hàng data
 import pandas as pd
 import csv 
 import numpy as np
