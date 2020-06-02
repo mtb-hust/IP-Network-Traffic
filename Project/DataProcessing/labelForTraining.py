@@ -1,7 +1,6 @@
 import os
 import pandas
 import numpy as np
-import json
 cwd = os.getcwd() #get current working directory
 print(cwd)
 

@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy  as np
+from sklearn.preprocessing import MinMaxScaler
 def read_data():
     with open("./Data/sorted20File.txt") as file_x:
         list_name=file_x.read().split("\n")
@@ -25,7 +26,12 @@ def read_data():
             label.append(label_)
     data = np.array(data)
     label = np.array(label)
-    return (data,label)
+    return (dataScaler(data),label)
+def dataScaler(data):
+    scaler = MinMaxScaler(feature_range=(0,1))
+    scaler.fit(data)
+    return scaler.transform(data)
 if __name__ == "__main__":
     data,label = read_data()
-    print(label[0])
+    data = dataScaler(data)
+    np.savetxt("./temp.csv", data, delimiter=",")
