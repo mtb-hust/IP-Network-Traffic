@@ -1,0 +1,7 @@
+dựa trên cơ sở libsvm. Min time = 0(n2) với n là số  lượng sample. Và có thể mất thực tế với số lượng samples vượt qua 10k dữ liệu. Khuyến cáo dùng Linear SVC.
+LinearSVC: viết tắt của Linear Support Vector Classification
+-> Sử dụng tố hơn SVC với lượng dataset lớn
+- Giống với SVC với hàm kernel linear.
+- Khác: sử dụng liblinear chứ không phải libsvm -> tạo ra hàm trừng phạt, hàm loss linh hoạt hơn.
+
+- Lớp này phù hợp với cả dữ liệu vào dày đặc và thưa thớt. Và với sự xuất hiện của nhiều lớp cần phân loại, nó hoạt động dựa trên phương thức one vs the r
