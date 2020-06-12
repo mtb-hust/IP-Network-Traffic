@@ -26,4 +26,5 @@ for i in frequency:
                 top20dic += "\n" +j   
 with open("./Data/sorted20File.txt", "w") as file_X:
     file_X.write(top20dic)
+
     

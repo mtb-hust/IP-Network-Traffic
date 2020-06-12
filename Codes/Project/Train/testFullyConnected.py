@@ -10,7 +10,6 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 import numpy as np
 
-
 data,label = ReadData.read_data()
 shape = label.shape 
 one_hot_label = np.zeros((shape[0], 20))
@@ -21,14 +20,14 @@ print(type(data))
 X_train, X_test, Y_train, Y_test = train_test_split(data, one_hot_label, test_size = 0.30, shuffle = True)
 print(type(X_test))
 print(type(X_train))
-# model=Sequential()
-# model.add(Dense(256,input_dim=6,activation=relu))
-# model.add(Dense(100,activation=relu))
-# model.add(Dense(20,activation=softmax))
-# model.compile(loss="categorical_crossentropy",optimizer=RMSprop(),metrics=["accuracy"])
-# model.fit(X_train,Y_train, epochs = 500, batch_size= 512)
-# model.save("model.h5")
-z
-# result = model.evaluate(X_test, Y_test)
-# print(result)
+model=Sequential()
+model.add(Dense(256,input_dim=6,activation=relu))
+model.add(Dense(100,activation=relu))
+model.add(Dense(20,activation=softmax))
+model.compile(loss="categorical_crossentropy",optimizer=RMSprop(),metrics=["accuracy"])
+model.fit(X_train,Y_train, epochs = 500, batch_size= 512)
+model.save("model.h5")
+model = keras.models.load_model("./Project/models/model.h5")
+result = model.evaluate(X_test, Y_test)
+print(result)
 model.summary()
