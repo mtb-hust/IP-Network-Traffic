@@ -19,6 +19,7 @@ def read_data():
         dataFrame_ = pd.read_csv('./Data/labelledData/' + name_file)
         dataFrame = dataFrame_[list_column_name].values.tolist()
         labelFrame = dataFrame_[column_label].values.tolist()
+        print(f"{len(dataFrame)} + {name_file}")
         for index in range(len(dataFrame)):
             data.append(dataFrame[index])
             # label_ = [0.0 for _ in range(len(list_name))]
